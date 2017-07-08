@@ -93,7 +93,7 @@ void draw()
       sound.rewind();
       sound.play();
       mainSQL.connect();
-      mainSQL.execute("UPDATE orders SET status_2=2 WHERE id=" + decodedText);
+      mainSQL.execute("UPDATE orders SET status_3=2 WHERE id=" + decodedText);
       mainSQL.query("SELECT * FROM orders WHERE printed=0 AND completed=1");
       mainSQL.close();
       latestDecodedText = decodedText;
